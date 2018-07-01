@@ -9,7 +9,7 @@ self.addEventListener('install', event => {
          'style.css',
          'js/main/index.js',
          'js/sw/index.js',
-
+         'images/background.png'
 
      ]);
    })
