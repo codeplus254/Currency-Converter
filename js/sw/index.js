@@ -6,11 +6,11 @@ self.addEventListener('install', event => {
  event.waitUntil(
    caches.open(staticCacheName).then(function(cache) {
      return cache.addAll([
-         'index.html',
-         'style.css',
-         'js/main/index.js',
-         'js/sw/index.js',
-        'background.png'
+         'https://codeplus254.github.io/index.html',
+         'https://codeplus254.github.io/style.css',
+         'https://codeplus254.github.io/js/main/index.js',
+         'https://codeplus254.github.io/js/sw/index.js',
+        'https://codeplus254.github.io/background.png'
 
      ]);
    })
