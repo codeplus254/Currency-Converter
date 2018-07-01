@@ -16,7 +16,7 @@ let btnConvert = document.querySelector('#btnConvert');
 let url = 'https://free.currencyconverterapi.com/api/v5/currencies';
 let query,rate,dbPromise;
 function convertCurrency(){
-  dbPromise = idb.open('test-db', 4, function(upgradeDb) {
+  dbPromise = idb.open('test-db', 5, function(upgradeDb) {
    switch(upgradeDb.oldVersion) {
      case 0:
        var keyValStore = upgradeDb.createObjectStore('keyval');
@@ -33,10 +33,10 @@ function convertCurrency(){
   	 fetch("https://free.currencyconverterapi.com/api/v5/convert?q=" + query + "&compact=ultra", {method : "GET"})
   	  .then(response => response.json())
   	  .then(data => {
-      for(con in data){
-       //console.log(data[con]);
-       //push the rate into local storage
-       rate=data[con];
+      for(con in data){   //cannot be converted to for...of loop
+
+        
+        rate=data[con];
 
 
 
@@ -59,8 +59,8 @@ function convertCurrency(){
          let keyValStore = tx.objectStore('keyval');
          return keyValStore.get(query);
        }).then(function(val) {
-              if (val == NaN){
-                alert("Please connect to the internet!")
+              if (isNaN(val)){
+                alert("Please connect to the internet or refresh the page!")
               }else{
                 document.getElementById("amount2").value = document.getElementById("amount1").value *val;
 
