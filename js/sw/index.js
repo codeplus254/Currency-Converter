@@ -1,4 +1,4 @@
-/ static cache versions
+// static cache versions
 let staticCacheName = 'currency-converter-v5';
 
 self.addEventListener('install', event => {
