@@ -32,8 +32,8 @@ self.addEventListener('fetch', function (event) {
  // the page skeleton from the cache
  var requestUrl = new URL(event.request.url);
  if (requestUrl.origin === location.origin) {
-   if (requestUrl.pathname === "/") {
-     event.respondWith(caches.match('/index.html'));
+   if (requestUrl.pathname === "https://codeplus254.github.io//") {
+     event.respondWith(caches.match('https://codeplus254.github.io//index.html'));
      return;
    }
  }
