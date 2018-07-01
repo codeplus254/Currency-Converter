@@ -6,9 +6,9 @@ self.addEventListener('install', event => {
  event.waitUntil(
    caches.open(staticCacheName).then(function(cache) {
      return cache.addAll([
-         '../index.html',
-         '../style.css',
-         '../js/main/index.js',
+         'index.html',
+         'style.css',
+         'js/main/index.js',
          'js/sw/index.js',
         'background.png'
 
