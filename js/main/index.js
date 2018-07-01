@@ -60,7 +60,7 @@ function convertCurrency(){
          return keyValStore.get(query);
        }).then(function(val) {
               if (isNaN(val)){
-                alert("Please connect to the internet or refresh the page!")
+                alert("Please connect to the internet or click the convert button again!")
               }else{
                 document.getElementById("amount2").value = document.getElementById("amount1").value *val;
 
