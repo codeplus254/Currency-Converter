@@ -1,11 +1,18 @@
-html {
-	height: 100%;
-}
+body {margin: 100px 200px 50px 200px;
+	background-color: brown;
+	text-align:center}
+#main {
+	padding: 50px 150px;
+	background-image:url(images/background.png);
+	position: center;
+				top: 50px;
+				margin: 100px;
+				}
+footer {text-align:
+	center;background-color:#FB9F45 }
 
-body {
-	background: linear-gradient(to right green, white);
-	border: 1px solid black;
-}
+
+
 
 h1 {
 	text-align: center;
