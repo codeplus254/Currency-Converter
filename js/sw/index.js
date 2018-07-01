@@ -1,5 +1,5 @@
 // static cache versions
-let staticCacheName = 'currency-converter-v5';
+let staticCacheName = 'currency-converter-v6';
 
 self.addEventListener('install', event => {
  self.skipWaiting();
