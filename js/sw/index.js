@@ -1,23 +1,16 @@
 / static cache versions
-let staticCacheName = 'currency-converter-v2';
+let staticCacheName = 'currency-converter-v5';
 
 self.addEventListener('install', event => {
  self.skipWaiting();
  event.waitUntil(
    caches.open(staticCacheName).then(function(cache) {
      return cache.addAll([
-         './index.html',
-         '/css/index.css',
-         '/js/app/loadCurrency.js',
-         '/js/app/convertCurrency.js',
-         '/images/andela.png',
-         '/images/udacity.png',
-         '/images/google.png',
-         '/images/dir.png',
-         '/images/cc.png',
-         'https://free.currencyconverterapi.com/api/v5/convert?q=${query}&compact=ultra',
-         '/https://free.currencyconverterapi.com',
-         '/https://free.currencyconverterapi.com/api/v5/currencies'
+         'index.html',
+         'style.css',
+         'js/main/index.js',
+         'js/sw/index.js',
+
      ]);
    })
  );
@@ -46,5 +39,5 @@ self.addEventListener('fetch', function (event) {
  event.respondWith(caches.match(event.request).then(function (response) {
    return response || fetch(event.request);
  }));
- console.log("hello world");
+ 
 });
